@@ -10,5 +10,3 @@ const cat = true
 console.log(dog || cat) //犬または猫を飼っているかどうか
 console.log(dog && cat) //犬と猫の両方を飼っている
 console.log(!dog && !cat) //犬も猫も飼っていない
-
-
