@@ -1,19 +1,32 @@
-const profile = {
-    name: "かまた",
-    age: 36,
-    hobby: "スキー",
-    major: "生物学"
-}
-const dictionary = {
-    name: "名前",
-    age: "年齢",
-    hobby: "趣味",
-    major: "専攻"
-}
+// オブジェクトの参照の実験
+const a1 = { x:1, y:2 }
+console.log(a1)
+const b1 = a1
+console.log(b1)
+b1.x = 10
+console.log(b1)
+console.log(a1) // どんな値が出力されるか？
+// { x:10, y:2 } が出力される
 
-const keys = Object.keys(profile)
-for (const key of keys) {
-    const value = profile[key]
-    const key_in_japanese = dictionary[key]
-    console.log(`私の${key_in_japanese}は${value}です。`)
+// ---
+const a2 = { x:1, y:2 }
+console.log(a2)
+const b2 = { x:1, y:2 }
+console.log(b2)
+b2.x = 10
+console.log(b2)
+console.log(a2) // どんな値が出力されるか？
+// { x:1, y:2 } が出力される
+
+// ---
+
+const a3 = {
+    x:1,
+    y: {
+        z:3,
+        w:4
+    }
 }
+const b3 = a3.y
+b3.z = 100
+console.log(a3)
